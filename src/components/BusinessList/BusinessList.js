@@ -8,7 +8,6 @@ class BusinessList extends React.Component {
 			<div className="BusinessList">
 				{this.props.businesses.map( business =>
 					<Business business={business}
-						businesses={businesses}
         				imgSrc={business.imageSrc}
         				name={business.name}
         				address={business.address}
