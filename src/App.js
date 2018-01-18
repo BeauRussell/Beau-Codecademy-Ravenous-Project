@@ -15,14 +15,14 @@ const business = {
 	reviewCount: 90
 };
 
-const businesses = {
+const businesses = [
 	business,
 	business,
 	business,
 	business,
 	business,
 	business
-};
+];
 
 class App extends React.Component {
   render() {
@@ -30,7 +30,18 @@ class App extends React.Component {
       <div className="App">
         <h1>ravenous</h1>
         <SearchBar />
-        <BusinessList businesses={businesses} /> 
+        <BusinessList
+        	businesses={businesses}
+        	imgSrc={business.imageSrc}
+        	name={business.name}
+        	address={business.address}
+        	city={business.city}
+        	state={business.state}
+        	zipCode={business.zipCode}
+        	category={business.category}
+        	rating={business.rating}
+        	reviewCount={business.reviewCount}
+		 /> 
       </div>
       );
   }
