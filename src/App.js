@@ -25,25 +25,29 @@ const businesses = [
 ];
 
 class App extends React.Component {
-  render() {
-    return (
-      <div className="App">
-        <h1>ravenous</h1>
-        <SearchBar />
-        <BusinessList
-        	businesses={businesses}
-        	imgSrc={business.imageSrc}
-        	name={business.name}
-        	address={business.address}
-        	city={business.city}
-        	state={business.state}
-        	zipCode={business.zipCode}
-        	category={business.category}
-        	rating={business.rating}
-        	reviewCount={business.reviewCount}
-		 /> 
-      </div>
-      );
+	searchYelp(term, location, sortBy) {
+		console.log('Searching Yelp with ' + term + ', ' + location + ', ' + sortBy);
+	}
+
+	render() {
+    	return (
+      	<div className="App">
+        	<h1>ravenous</h1>
+        	<SearchBar searchYelp={this.searchYelp} />
+        	<BusinessList
+        		businesses={businesses}
+        		imgSrc={business.imageSrc}
+        		name={business.name}
+        		address={business.address}
+        		city={business.city}
+        		state={business.state}
+        		zipCode={business.zipCode}
+        		category={business.category}
+        		rating={business.rating}
+        		reviewCount={business.reviewCount}
+			 /> 
+      	</div>
+      	);
   }
 }
 
