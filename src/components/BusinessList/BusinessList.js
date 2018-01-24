@@ -17,6 +17,7 @@ class BusinessList extends React.Component {
         				category={business.category}
         				rating={business.rating}
         				reviewCount={business.reviewCount}
+        				key={business.id}
 					/> 
 				)}
 			</div>
